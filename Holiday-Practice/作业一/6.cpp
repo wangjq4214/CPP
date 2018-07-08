@@ -18,6 +18,8 @@ int main() {
 	}
 	
 	for (map<int, int>::reverse_iterator iter = duoXiangShi.rbegin(); iter != duoXiangShi.rend(); ++iter) {
-		cout << iter->first << " " << iter->second << endl;
+		if (iter->second != 0) {
+			cout << iter->first << " " << iter->second << endl;
+		}
 	}
 }

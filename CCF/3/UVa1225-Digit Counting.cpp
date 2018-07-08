@@ -12,11 +12,16 @@ int main() {
 		int sum[10] = {0};
 
 		for (int i = 1; i <= str; ++i) {
-			sum[str - '0']++;
+			int x = i; 
+			while (x) {
+				sum[x % 10]++;
+				x /= 10;
+			}
 		}
 		cout << sum[0];
 		for (int i = 1; i < 10; ++i) {
 			cout << " " << sum[i];
 		}
+		cout << endl;
 	}
 }
