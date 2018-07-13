@@ -17,7 +17,7 @@ int main() {
 
         // 排除特殊
         if (store.size() == 1) {
-            cout << "1 1";
+            cout << store[0];
         } else {
             // 记录初始量
             int y = store[0];
