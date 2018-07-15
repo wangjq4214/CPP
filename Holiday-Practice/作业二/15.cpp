@@ -51,17 +51,13 @@ double finding(double *spend, double submiting, double q, int n, int count) {
     } else if (submiting == q) {
         return submiting;
     } else {
-        double max = 0;
+        double max = submiting;
         for (int i = count; i < n; ++i) {
-            double temp, temp1 = submiting + spend[i];
-            temp = finding(spend, submiting + spend[i], q, n, ++count);
-            if (temp = -1) {
-                temp = temp1;
-            }
+            double temp;
+            temp = finding(spend, submiting + spend[i], q, n, i + 1);
             if (temp > max) {
                 max = temp;
             }
-
         }
         return max;
     }
