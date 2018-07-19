@@ -20,8 +20,6 @@ int main() {
 		for (int j = 0; j < str1.size(); ++j) {
 			if (str2.size() == 3) {
 				str2 += "-";
-				j--;
-				continue; 
 			}
 			if (!isdigit(str1[j])) {
 				if (isupper(str1[j])) {
