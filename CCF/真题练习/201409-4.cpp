@@ -56,7 +56,11 @@ void findIt() {
                 if (!point[now_x][now_y].visited) {
                     if (point[now_x][now_y].orderNum != 0) {
                         ans += point[now_x][now_y].orderNum * (temp.step + 1);
+                        point[now_x][now_y].step = temp.step + 1;
                         point[now_x][now_y].visited = true;
+                        point[now_x][now_y].x = now_x;
+                        point[now_x][now_y].y = now_y;
+                        record.push(point[now_x][now_y]);
                     } else {
                         point[now_x][now_y].step = temp.step + 1;
                         point[now_x][now_y].visited = true;
